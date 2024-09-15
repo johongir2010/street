@@ -3,6 +3,7 @@ from django.contrib.admin import ModelAdmin
 
 from .models import *
 
+
 # Register your models here.
 # admin.site.register(User)
 @admin.register(User)
@@ -14,22 +15,13 @@ class UserAdmin(admin.ModelAdmin):
 
 @admin.register(Basket)
 class BasketAdmin(admin.ModelAdmin):
-    list_display = ['id', 'user', 'item', 'count' ]
+    list_display = ['id', 'user', 'item', 'count']
     list_filter = ['id', 'user']
     ordering = ['-id']
 
 
-
-
-
-
-
-
-
-
-
 # admin.site.register(Basket)
-# admin.site.register(City)
+admin.site.register(City)
 # admin.site.register(Branches)
 # admin.site.register(Category)
 # admin.site.register(Items)
